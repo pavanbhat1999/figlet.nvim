@@ -13,7 +13,7 @@ end
 local function Fig(arg1)
 	vim.api.nvim_command(":read !figlet -f "..Font.." ".. arg1)
 end
----------------------------------------------------------------------------------------------------
+
 return {
 
 	openConfig = openConfig,
