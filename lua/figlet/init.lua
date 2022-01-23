@@ -1,24 +1,18 @@
 --Global Settings-----------------------------------------------------------------------------------
 Font = "ANSI\\ Shadow"
----------------------------------------------------------------------------------------------------
-local function openConfig()
-	local file = "$HOME/.config/nvim/init.lua"
-	vim.api.nvim_command("edit" .. file)
-end
----------------------------------------------------------------------------------------------------
-local function openTerminal()
-	vim.api.nvim_command(":terminal")
-end
----------------------------------------------------------------------------------------------------
 local function Fig(arg1)
-	vim.api.nvim_command(":read !figlet -f "..Font.." ".. arg1)
+	vim.api.nvim_command(":read !figlet -f " .. Font .. " " .. arg1)
+end
+
+-- HACK: everything is hack here anyone can suggest a better way to do this
+local function FigComment(arg1)
+	vim.api.nvim_command(":read !figlet -f " .. Font .. " " .. arg1)
+	require("Comment.api").toggle_linewise_op("line")
+	vim.api.nvim_command("normal o")
+	vim.api.nvim_command("normal x")
 end
 
 return {
-
-	openConfig = openConfig,
-
-	openTerminal = openTerminal,
-
 	Fig = Fig,
+	FigComment = FigComment,
 }
