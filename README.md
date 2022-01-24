@@ -31,35 +31,59 @@ You can use any plugin Manager you use
 ```lua
 use('pavanbhat1999/figlet.nvim')
 ```
+## Commands
+
+```vim
+ :FigComment <pattern>
+ :Fig <pattern>
+ :FigCommentHighlight <pattern>
+ :FigList
+ :FigSelect
+ :FigSelectComment
+```
 
 ## Usage
-Syntax  `:Fig <pattern_string>`
-
-Example  `:Fig neovim`
-
-![Main Fig](/home/root99/Downloads/Wall/L.png)
-
 Syntax  `:FigComment <pattern_string>`
 
 Example `:FigComment NeoVim`
 
-![Main Fig](/home/root99/Downloads/Wall/L.png)
+![Main Fig](doc/GIFS/FigComment.gif)
 
-Syntax `:FigSelect <pattern_string>`
+Syntax  `:Fig <pattern_string>`
 
-Example `:FigSelect neovim`
+Example  `:Fig neovim`
 
-![Main Fig](/home/root99/Downloads/Wall/L.png)
+![Main Fig](doc/GIFS/Fig.gif)
 
-Syntax `:FigSelectComment <pattern_string>`
+Syntax  `:FigCommentHighlight <pattern_string>`
 
-Example `:FigSelectComment neovim`
+Example  `:FigCommentHighlight neovim`
 
-![Main Fig](/home/root99/Downloads/Wall/L.png)
+![Main Fig](doc/GIFS/FigHighlight.gif)
+
+## Convert normal text to ASCII arts
+
+Syntax `:FigSelect`
+
+Example `:FigSelect`
+
+![Main Fig](doc/GIFS/FigSelect.gif)
+
+Syntax `:FigSelectComment`
+
+Example `:FigSelectComment`
+
+![Main Fig](doc/GIFS/FigSelectcomment.gif)
 
 Syntax `:FigList`
 
 Example `:FigList`
 
-![Main Fig](/home/root99/Downloads/Wall/L.png)
+![Main Fig](doc/GIFS/FigList.gif)
+
+# TODO
+
+1. Add Telescope List to show fonts
+2. Visual Select -> Figlet
+3. Follow Best practice
 
