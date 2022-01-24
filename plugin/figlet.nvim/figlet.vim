@@ -12,7 +12,7 @@ set cpo&vim " reset them to defaults
 
 command! -nargs=1 Fig lua require'figlet'.Fig(<f-args>)
 command! -nargs=1 FigComment lua require'figlet'.FigComment(<f-args>)
-command! -nargs=1 FigCommentHighlight lua require'figlet'.FigCommentHighlight(<f-args>)
+command! -nargs=1 FigCommentHighlight lua require'figlet'.FigCommentWithHighlight(<f-args>)
 command! FigList lua require'figlet'.FigList()
 command! FigSelect lua require'figlet'.FigSelect()
 command! FigSelectComment lua require'figlet'.FigSelectComment()
