@@ -14,7 +14,7 @@ command! -nargs=1 Fig lua require'figlet'.Fig(<f-args>)
 command! -nargs=1 FigComment lua require'figlet'.FigComment(<f-args>)
 command! FigList lua require'figlet'.FigList()
 command! FigSelect lua require'figlet'.FigSelect()
-command! FigLine lua require'figlet'.GetLines()
+command! FigSelectComment lua require'figlet'.FigSelectComment()
 
 let &cpo = s:save_cpo " and restore after
 unlet s:save_cpo
