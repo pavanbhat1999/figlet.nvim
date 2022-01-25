@@ -12,7 +12,8 @@ Note: 🙇I am a noob in lua and plugin development, So this is just my attempt 
 ```bash
 sudo pacman -S figlet
 ```
-- Fonts for figlet in initial release I have used font called as ANSI shadow and ANSI Regular. You should have these fonts installed.
+- Fonts for figlet in initial release I have used font called as ANSI shadow and ANSI Regular. You should have these fonts installed. 
+PS : fallback to default will be implemented in future
 ```bash
 git clone https://github.com/xero/figlet-fonts.git
 cp  figlet-fonts/* /usr/share/figlet/fonts/
