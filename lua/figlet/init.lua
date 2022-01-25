@@ -2,6 +2,9 @@
 -- Font = "ANSI\\ Shadow"
 Font = "ANSI\\ Regular"
 ---------------------------------------------------------------------------------------------------
+local function Config(config)
+    Font = config.font
+end
 -- HACK: I feel everything is hack here anyone can suggest a better way to do this-------------------------
 local function Fig(arg1)
 	vim.api.nvim_command(":read !figlet -f " .. Font .. " " .. arg1)
@@ -49,6 +52,7 @@ local function FigSelectComment()
 	FigComment(arg1)
 end
 return {
+    Config = Config,
 	Fig = Fig,
 	FigComment = FigComment,
     FigCommentWithHighlight = FigCommentWithHighlight,
