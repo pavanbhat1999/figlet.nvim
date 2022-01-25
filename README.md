@@ -38,7 +38,9 @@ You can use any plugin Manager you use
 
 ## Config
 
+```lua
 require("figlet").Config({font="3d"})
+```
 ## Commands
 
 ```vim
