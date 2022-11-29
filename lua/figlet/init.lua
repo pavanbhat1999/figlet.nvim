@@ -19,7 +19,8 @@ end
 
 local function FigComment(arg1)
 	vim.api.nvim_command(":read !figlet -f " .. Font .. " " .. arg1)
-	require("Comment.api").toggle_linewise_op("line")
+	-- require("Comment.api").toggle_linewise_op("line")
+	require("Comment.api").comment_toggle_linewise_count()
 	vim.api.nvim_command("normal dd")
 	-- vim.api.nvim_command("normal o")
 	-- vim.api.nvim_command("normal dw")
