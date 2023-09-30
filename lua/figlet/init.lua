@@ -1,14 +1,16 @@
 --Global Settings-----------------------------------------------------------------------------------
-Font = "ANSI\\ Shadow"
+-- TODO:Correct the fonts options
+-- Font = "ANSI\\ Shadow"
 -- Font = "ANSI\\ Regular"
--- Font = "3d"
+-- Font = "3-d"
 ---------------------------------------------------------------------------------------------------
-local function Config(config)
-    Font = config.font
-end
+-- local function Config(config)
+--     Font = config.font
+-- end
 -- HACK: I feel everything is hack here anyone can suggest a better way to do this-------------------------
 local function Fig(arg1)
-    vim.api.nvim_command(":read !figlet -f " .. Font .. " " .. arg1)
+    -- vim.api.nvim_command(":read !figlet -f " .. Font .. " " .. arg1)
+    vim.api.nvim_command(":read !figlet " .. " " .. arg1)
 end
 
 -- Figlet with comment TODO: Refine this
@@ -19,18 +21,20 @@ local function GetLine()
 end
 
 local function FigComment(arg1)
-    vim.api.nvim_command(":read !figlet -f " .. Font .. " " .. arg1)
+    -- vim.api.nvim_command(":read !figlet -f " .. Font .. " " .. arg1)
+    vim.api.nvim_command(":read !figlet " .. " " .. arg1)
     -- require("Comment.api").toggle_linewise_op("line")
     require("Comment.api").toggle.linewise("line")
-    vim.api.nvim_command("normal dd")
+    -- vim.api.nvim_command("normal dd")
     -- vim.api.nvim_command("normal o")
     -- vim.api.nvim_command("normal dw")
 end
 local function FigCommentWithHighlight(arg1)
     local start_line = GetLine()
-    vim.api.nvim_command(":read !figlet -f " .. Font .. " " .. arg1)
+    -- vim.api.nvim_command(":read !figlet -f " .. Font .. " " .. arg1)
+    vim.api.nvim_command(":read !figlet " .. " " .. arg1)
     require("Comment.api").toggle.linewise("line")
-    vim.api.nvim_command("normal dd")
+    -- vim.api.nvim_command("normal dd")
     vim.api.nvim_command("normal o")
     vim.api.nvim_command("normal x")
     local stop_line = GetLine()
@@ -45,12 +49,10 @@ end
 -- TODO: Visual select into figlet
 local function FigSelect()
     local arg1 = vim.fn.getline(".")
-    vim.api.nvim_command(":normal dd")
     Fig(arg1)
 end
 local function FigSelectComment()
     local arg1 = vim.fn.getline(".")
-    vim.api.nvim_command(":normal dd")
     FigComment(arg1)
 end
 return {
